@@ -1,3 +1,5 @@
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './app.routes';
 import { HttpModule } from '@angular/http';
 import { MyMaterialModule } from './my-maerial.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,10 +9,12 @@ import { CovalentLayoutModule } from '@covalent/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { AccessComponent } from './access/access.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AccessComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +22,8 @@ import { AppComponent } from './app.component';
     MyMaterialModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    appRoutes
   ],
   providers: [],
   bootstrap: [AppComponent]

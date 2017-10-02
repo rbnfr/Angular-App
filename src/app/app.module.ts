@@ -1,3 +1,4 @@
+import { AccessService } from './access/shared/access.service';
 import { AuthGuardService } from './shared/authentication/auth-guard.service';
 import { AuthService } from './shared/authentication/auth.service';
 import { RouterModule } from '@angular/router';
@@ -34,6 +35,7 @@ import { QueueViewerComponent } from './queue-viewer/queue-viewer.component';
   ],
   providers: [
               AuthService,
+              AccessService,
               AuthGuardService
             ],
   bootstrap: [AppComponent]

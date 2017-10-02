@@ -1,3 +1,4 @@
+import { AccessService } from './shared/access.service';
 import { CodeViewerComponent } from '../code-viewer/code-viewer.component';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -9,10 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccessComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private accessService: AccessService) { }
 
-  submitAccess(): void {
-    this.router.navigate(['code']);
+  submitAccess(formValue): void {
+    this.accessService.login(formValue.value.name, formValue.value.email, formValue.value.phone);
+    formValue.reset();
   }
 
   ngOnInit() {

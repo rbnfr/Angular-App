@@ -1,3 +1,5 @@
+import { CodeViewerComponent } from '../code-viewer/code-viewer.component';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccessComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  submitAccess(): void {
+    this.router.navigate([CodeViewerComponent]);
+  }
 
   ngOnInit() {
   }

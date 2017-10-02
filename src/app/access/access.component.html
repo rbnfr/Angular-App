@@ -2,7 +2,7 @@
   <md-card>
     <img md-card-image src="assets/images/jumptheq.png">
     <md-card-title>Access</md-card-title>
-    <form layout="column" class="pad" #accessForm="ngForm">
+    <form layout="column" class="pad" (ng-submit)="submitAccess()" #accessForm="ngForm">
 
       <md-input-container>
         <input mdInput placeholder="Name" ngModel name="name" required>
@@ -12,13 +12,12 @@
         <input mdInput placeholder="Email" ngModel email name="email" required>
       </md-input-container>
       <span class="text-sm">Filling this, I acccept to receive commercial information.</span>
-
       <md-input-container>
         <input mdInput placeholder="Phone" type="number" ngModel name="phone" required>
       </md-input-container>
 
     <md-card-actions>
-      <button md-raised-button color="primary" [disabled]="!accessForm.form.valid" class="text-upper">Request it</button>
+      <button md-raised-button type="submit" color="primary" [disabled]="!accessForm.form.valid" class="text-upper">Request it</button>
     </md-card-actions>
 
     </form>

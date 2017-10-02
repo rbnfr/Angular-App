@@ -10,11 +10,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AccessComponent } from './access/access.component';
+import { CodeViewerComponent } from './code-viewer/code-viewer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccessComponent
+    AccessComponent,
+    CodeViewerComponent
   ],
   imports: [
     BrowserModule,

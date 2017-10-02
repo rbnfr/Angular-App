@@ -1,0 +1,13 @@
+<td-layout>
+  <md-card>
+    <img md-card-image src="assets/images/jumptheq.png">
+    <md-card-title>Queue code for {{name}} is:</md-card-title> <!-- // interpolation of the variable name which corresponds with the person who requested the code -->
+
+    <h1 style="font-size: 100px" class="text-center text-xxl push-lg">{{code}}</h1> <!-- // queue code for that person -->
+
+    <div class="text-center pad-bottom-lg">
+      <button md-raised-button (click)="navigateQueue()" color="primary" class="text-upper">Watch the queue</button> <!-- // navigation function like access -->
+    </div>
+
+  </md-card>
+</td-layout>

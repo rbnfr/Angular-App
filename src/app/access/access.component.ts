@@ -12,7 +12,7 @@ export class AccessComponent implements OnInit {
   constructor(private router: Router) { }
 
   submitAccess(): void {
-    this.router.navigate([CodeViewerComponent]);
+    this.router.navigate(['code']);
   }
 
   ngOnInit() {

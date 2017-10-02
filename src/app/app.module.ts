@@ -1,3 +1,4 @@
+import { AuthService } from './shared/authentication/auth.service';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { HttpModule } from '@angular/http';
@@ -30,7 +31,7 @@ import { QueueViewerComponent } from './queue-viewer/queue-viewer.component';
     appRoutes,
     CovalentDataTableModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

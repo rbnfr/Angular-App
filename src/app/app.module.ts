@@ -1,7 +1,10 @@
+import { HttpModule } from '@angular/http';
 import { MyMaterialModule } from './my-maerial.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CovalentLayoutModule } from '@covalent/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -11,8 +14,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    CovalentLayoutModule,
+    MyMaterialModule,
     BrowserAnimationsModule,
-    MyMaterialModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

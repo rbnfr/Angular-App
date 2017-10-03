@@ -11,7 +11,7 @@ export class AccessService {
               private router: Router) { }
 
   login(name, email, phone): void {
-    if (name === 'user' && email == 'asd@asd.com' && phone === 123456789) {
+    if (name !== null && email !== null && phone !== null) {
       this.auth.setLogged(true);
       this.auth.setUser(name);
       this.router.navigate(['code']);

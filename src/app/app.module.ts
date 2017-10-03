@@ -1,7 +1,7 @@
 import { AccessService } from './access/shared/access.service';
 import { AuthGuardService } from './shared/authentication/auth-guard.service';
 import { AuthService } from './shared/authentication/auth.service';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { HttpModule } from '@angular/http';
 import { MyMaterialModule } from './my-maerial.module';

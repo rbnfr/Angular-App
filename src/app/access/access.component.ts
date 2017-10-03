@@ -9,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./access.component.css']
 })
 export class AccessComponent implements OnInit {
+  router: any;
 
-  constructor(private accessService: AccessService) { }
+  constructor(private accessService: AccessService) {
+  }
 
   submitAccess(formValue): void {
     this.accessService.login(formValue.value.name, formValue.value.email, formValue.value.phone);

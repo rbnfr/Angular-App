@@ -1,7 +1,10 @@
+import { format } from 'util';
+import { Observable } from 'rxjs/Rx';
 import { QueueViewerService } from './shared/queue-viewer.service';
 import { Router } from '@angular/router';
 import { ITdDataTableColumn } from '@covalent/core';
 import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-queue-viewer',
@@ -10,20 +13,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QueueViewerComponent implements OnInit {
   columns: ITdDataTableColumn[] = [
-    { name: 'code',  label: 'Code'},
-    { name: 'hour', label: 'Hour' },
-    { name: 'name', label: 'Name'}];
+    { name: 'visitor.name',     label: 'Name'},
+    { name: 'code.dateAndTime', label: 'Hour', format: ((v: string) => moment(v).format('LLL')) },
+    { name: 'code.code',        label: 'Code'}];
 
-  queuers: any[];
+  queuers: Observable<any>;
 
 
   constructor(private router: Router,
               private queueService: QueueViewerService) { }
 
   ngOnInit(): void {
-    this.queueService.getCode().subscribe((data) => {
-      /* this.queuers = data; */
-    });
+    this.queuers = this.queueService.getQueuers();
   }
 
   navigateCode(): void {

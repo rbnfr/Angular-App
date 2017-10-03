@@ -15,7 +15,7 @@ export class AccessComponent implements OnInit {
   }
 
   submitAccess(formValue): void {
-    this.accessService.login(formValue.value.name, formValue.value.email, formValue.value.phone);
+    this.accessService.register(formValue.value.name, formValue.value.email, formValue.value.phone);
     formValue.reset();
   }
 

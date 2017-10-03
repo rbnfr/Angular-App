@@ -13,8 +13,9 @@ export class AuthService {
     this.logged = login;
   }
 
-  public getUser(username: string): void {
-    this.user = username;
+  public getUser(): string {
+    return this.user;
+
   }
   public setUser(username: string): void {
     this.user = username;

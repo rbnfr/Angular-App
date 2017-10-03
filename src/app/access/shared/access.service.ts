@@ -7,11 +7,13 @@ import { MdSnackBar } from '@angular/material';
 export class AccessService {
 
   constructor(private auth: AuthService,
-              public snackBar: MdSnackBar,
+              public snackBar: MdSnackBar, // Snackbar opens a little auto-hidding bar with info and close button
               private router: Router) { }
 
   login(name, email, phone): void {
-    if (name !== null && email !== null && phone !== null) {
+    if (name === 'Anakin' && email === 'annie@empire.com' && phone !== null) {
+      alert('You were the Chosen One!');
+    } else if (name !== null && email !== null && phone !== null) {
       this.auth.setLogged(true);
       this.auth.setUser(name);
       this.router.navigate(['code']);

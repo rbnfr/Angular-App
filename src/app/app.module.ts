@@ -1,3 +1,5 @@
+import { CodeViewerService } from './code.viewer/shared/code-viewer.service';
+import { QueueViewerService } from './queue-viewer/shared/queue-viewer.service';
 import { AccessService } from './access/shared/access.service';
 import { AuthGuardService } from './shared/authentication/auth-guard.service';
 import { AuthService } from './shared/authentication/auth.service';
@@ -36,7 +38,9 @@ import { QueueViewerComponent } from './queue-viewer/queue-viewer.component';
   providers: [
               AuthService,
               AccessService,
-              AuthGuardService
+              AuthGuardService,
+              QueueViewerService,
+              CodeViewerService
             ],
   bootstrap: [AppComponent]
 })

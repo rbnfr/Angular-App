@@ -21,8 +21,8 @@ export class QueueViewerComponent implements OnInit {
               private queueService: QueueViewerService) { }
 
   ngOnInit(): void {
-    this.queueService.getQueuers().subscribe((data) => {
-      this.queuers = data;
+    this.queueService.getCode().subscribe((data) => {
+      /* this.queuers = data; */
     });
   }
 
